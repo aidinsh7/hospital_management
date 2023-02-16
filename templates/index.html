@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Aidin Health | By aidin
+{% endblock %}
+
+
+
+{% block content %}
+
+{% load static %}
+
+<section class="banner_part p-3 my-2">
+  <div class="container">
+  <div class="row align-items-center">
+  <div class="col-lg-5 col-xl-5">
+  <div class="banner_text">
+  <div class="banner_text_iner text-white">
+  <h5>We are here for your care</h5>
+  <h1 class="font-weight-bold">Best Care &
+  Better Doctor !</h1>
+  <p>Hidden among the beautiful hill side of Meppadi, Wayanad , Le Valor by Crezenta is a perfect Treatment destination at the beautiful Wayanad.The precisely designed hospitality is the best place for a family or friends get together. </p>
+  <a href="{% url 'bookings' %}" class="btn btn-clr">Make an appointment</a>
+  </div>
+  </div>
+  </div>
+  <div class="col-lg-7">
+  <div class="banner_img">
+  <img src="https://preview.colorlib.com/theme/medico/img/xbanner_img.png.pagespeed.ic.MLXiW6RElW.webp" alt="">
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+{% endblock %}

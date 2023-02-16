@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Aidin Health | Doctors
+{% endblock %}
+
+
+{% block content %}
+<div class="container " >
+  <div class="row">
+      <div class="col-md-12 p-5 text-center">
+          <h1 class=" text-white text-decoration-underline"> Doctors</h1>
+      </div>
+  </div>
+</div>
+<div class='container  my-5 rounded p-4 justify-content-center' style="border-radius:30px; background-color:white">
+{% for doctor in doctors%}
+    <div class="card p-2 my-3 mx-3" style=" border-radius:15px; display:inline-block;  background-color:#6db8bb">
+        <img class="card-img-top p-2" style="border-radius:30px; width: 19rem; height: 19rem" src="{{ d.doc_img.url }}" alt="{{ d.name }}">
+        <div class="card-body">
+          <h5 class="card-title text-dark">{{doctor.doc_name}}</h5>
+          <p class="card-text text-primary">{{doctor.doc_spec}}</p>
+          <h6 class="text-dark">{{doctor.dep_name}}</h6>
+          <a class="btn text-color-btn " href="{% url 'bookings' %}" role="button">Book Doctor</a>
+        </div>
+      </div>
+
+{% endfor %}
+
+</div>
+{% endblock %}

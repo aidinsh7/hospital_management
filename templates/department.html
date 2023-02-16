@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+AidinHealth | Department
+{% endblock %}
+
+
+{% block content %}
+<div class="container " >
+    <div class="row">
+        <div class="col-md-12 p-5 text-center">
+            <h1 class=" text-white text-decoration-underline"> Departments</h1>
+        </div>
+    </div>
+</div>
+
+<div class='container  my-5 rounded p-4 justify-content-center' style="background-color:#6db8bb;">
+    {% for department in department %}
+    <div class="card p-2 my-3 mx-3  " style="width: 20rem; display:inline-block">
+        <div class="card-body">
+          <h5 class="card-title" style="color:#140941">{{department.department_name}}</h5>
+          <p class="card-text">{{department.department_discription}}</p>
+        </div>
+      </div>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
